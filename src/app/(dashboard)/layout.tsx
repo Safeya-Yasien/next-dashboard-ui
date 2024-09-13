@@ -22,6 +22,7 @@ export default function DashboardLayout({
       </div>
       <div className=" w-5/6 md:w-[92%] lg:w-[86%] bg-[#F7F8FA] overflow-scroll">
       <Navbar/>
+      {children}
       </div>
     </div>
   );

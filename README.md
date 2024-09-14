@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-[Live Demo](insert-live-demo-link-here)
+[Live Demo](https://next-dashboard-ui.netlify.app/)
 
 ## Routes
 

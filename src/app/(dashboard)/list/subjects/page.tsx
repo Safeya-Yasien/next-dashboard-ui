@@ -2,6 +2,7 @@ import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
 import { role, subjectsData } from "@/lib/data";
+import { TSubject } from "@/types/subject";
 import Image from "next/image";
 
 const columns = [

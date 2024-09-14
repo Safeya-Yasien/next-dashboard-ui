@@ -46,10 +46,8 @@ const AssignmentListPage = () => {
           {role === "admin" ||
             (role === "teacher" && (
               <>
-                {/* <FormModal table="assignment" type="update" data={item} />
-                <FormModal table="assignment" type="delete" id={item.id} /> */}
-                <p>FormModal</p>
-                <p>FormModal</p>
+                <FormModal table="assignment" type="update" data={item} />
+                <FormModal table="assignment" type="delete" id={item.id} />
               </>
             ))}
         </div>
@@ -75,8 +73,7 @@ const AssignmentListPage = () => {
             </button>
             {role === "admin" ||
               (role === "teacher" && (
-                // <FormModal table="assignment" type="create" />
-                <p>FormModal</p>
+                <FormModal table="assignment" type="create" />
               ))}
           </div>
         </div>

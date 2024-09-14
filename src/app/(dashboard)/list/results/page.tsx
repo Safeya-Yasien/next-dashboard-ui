@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -59,9 +60,9 @@ const ResultListPage = () => {
               <>
                 {/* <FormModal table="result" type="update" data={item} />
                 <FormModal table="result" type="delete" id={item.id} /> */}
-                             <p>FormModal</p>
-                             <p>FormModal</p>
-                             </>
+                <p>FormModal</p>
+                <p>FormModal</p>
+              </>
             ))}
         </div>
       </td>
@@ -84,9 +85,8 @@ const ResultListPage = () => {
             </button>
             {role === "admin" ||
               (role === "teacher" && (
-                // <FormModal table="result" type="create" />  
-                <p>FormModal</p>
-            ))}
+                <FormModal table="result" type="create" />
+              ))}
           </div>
         </div>
       </div>

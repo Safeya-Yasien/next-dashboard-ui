@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -45,10 +46,8 @@ const ExamListPage = () => {
           {role === "admin" ||
             (role === "teacher" && (
               <>
-                {/* <FormModal table="exam" type="update" data={item} />
-                <FormModal table="exam" type="delete" id={item.id} /> */}
-                <p>FormModal</p>
-                <p>FormModal</p>
+                <FormModal table="exam" type="update" data={item} />
+                <FormModal table="exam" type="delete" id={item.id} />
               </>
             ))}
         </div>
@@ -71,10 +70,7 @@ const ExamListPage = () => {
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
             {role === "admin" ||
-              (role === "teacher" && (
-                //  <FormModal table="exam" type="create" />
-                <p>FormModal</p>
-              ))}
+              (role === "teacher" && <FormModal table="exam" type="create" />)}
           </div>
         </div>
       </div>

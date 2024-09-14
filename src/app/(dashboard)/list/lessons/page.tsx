@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -64,8 +65,7 @@ const LessonListPage = () => {
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
             {role === "admin" && (
-              //  <FormModal table="lesson" type="create" />
-              <p>FormModal</p>
+               <FormModal table="lesson" type="create" />
             )}
           </div>
         </div>

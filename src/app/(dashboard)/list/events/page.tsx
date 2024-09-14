@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -50,11 +51,9 @@ const EventListPage = () => {
         <div className="flex items-center gap-2">
           {role === "admin" && (
             <>
-              {/* <FormModal table="event" type="update" data={item} />
-              <FormModal table="event" type="delete" id={item.id} /> */}
-                <p>FormModal</p>
-                <p>FormModal</p>
-                </>
+              <FormModal table="event" type="update" data={item} />
+              <FormModal table="event" type="delete" id={item.id} />
+            </>
           )}
         </div>
       </td>
@@ -75,10 +74,7 @@ const EventListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
-            {role === "admin" && 
-            // <FormModal table="event" type="create" />
-            <p>FormModal</p>
-}
+            {role === "admin" && <FormModal table="event" type="create" />}
           </div>
         </div>
       </div>

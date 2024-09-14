@@ -1,4 +1,3 @@
-import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -51,9 +50,11 @@ const EventListPage = () => {
         <div className="flex items-center gap-2">
           {role === "admin" && (
             <>
-              <FormModal table="event" type="update" data={item} />
-              <FormModal table="event" type="delete" id={item.id} />
-            </>
+              {/* <FormModal table="event" type="update" data={item} />
+              <FormModal table="event" type="delete" id={item.id} /> */}
+                <p>FormModal</p>
+                <p>FormModal</p>
+                </>
           )}
         </div>
       </td>
@@ -62,7 +63,7 @@ const EventListPage = () => {
 
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
-      {/* TOP */}
+      {}
       <div className="flex items-center justify-between">
         <h1 className="hidden md:block text-lg font-semibold">All Events</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
@@ -74,13 +75,16 @@ const EventListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
-            {role === "admin" && <FormModal table="event" type="create" />}
+            {role === "admin" && 
+            // <FormModal table="event" type="create" />
+            <p>FormModal</p>
+}
           </div>
         </div>
       </div>
-      {/* LIST */}
+      {}
       <Table columns={columns} renderRow={renderRow} data={eventsData} />
-      {/* PAGINATION */}
+      {}
       <Pagination />
     </div>
   );

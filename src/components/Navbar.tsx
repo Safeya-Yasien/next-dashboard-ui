@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between p-4">
-      {/* search */}
+      {}
       <div className="hidden md:flex items-center rounded-full gap-2 text-xs ring-2 ring-gray-300 px-2">
         <Image src="/search.png" alt="search" width={14} height={14} />
         <input
@@ -13,7 +13,7 @@ const Navbar = () => {
           className="outline-none bg-transparent p-2 w-[200px]"
         />
       </div>
-      {/* icons */}
+      {}
       <div className="flex items-center gap-6 w-full justify-end">
         <div className="bg-white rounded-full w-7 h-7 flex justify-center items-center cursor-pointer">
           <Image src="/message.png" alt="message" width={20} height={20} />

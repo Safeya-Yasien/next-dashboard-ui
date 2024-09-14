@@ -1,5 +1,21 @@
 # Lama Dev School Management Dashboard
 
+## Live Demo
+
+[Live Demo](insert-live-demo-link-here)
+
+## Routes
+
+- `/admin` - Admin Dashboard
+- `/teacher` - Teacher Dashboard
+- `/student` - Student Dashboard
+- `/parent` - Parent Dashboard
+- `/sign-in` - Sign-in Page
+
+## Description
+
+Next Dashboard UI is a modern, responsive dashboard application built with Next.js, providing role-based access to different user types such as admins, teachers, students, and parents. The application includes features like authentication, dynamic routing, and a sleek user interface for managing various tasks.
+
 ## Getting Started
 
 First, run the development server:
@@ -22,5 +38,5 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Lama Dev Youtube Channel](https://youtube.com/lamadev) 
+- [Lama Dev Youtube Channel](https://youtube.com/lamadev)
 - [Next.js](https://nextjs.org/learn)

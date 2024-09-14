@@ -2,13 +2,9 @@ import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
-import {
-  assignmentsData,
-  role,
-} from "@/lib/data";
+import { assignmentsData, role } from "@/lib/data";
 import { TAssignment } from "@/types/assignment";
 import Image from "next/image";
-
 
 const columns = [
   {
@@ -47,12 +43,15 @@ const AssignmentListPage = () => {
       <td className="hidden md:table-cell">{item.dueDate}</td>
       <td>
         <div className="flex items-center gap-2">
-          {role === "admin" || role === "teacher" && (
-            <>
-              <FormModal table="assignment" type="update" data={item} />
-              <FormModal table="assignment" type="delete" id={item.id} />
-            </>
-          )}
+          {role === "admin" ||
+            (role === "teacher" && (
+              <>
+                {/* <FormModal table="assignment" type="update" data={item} />
+                <FormModal table="assignment" type="delete" id={item.id} /> */}
+                <p>FormModal</p>
+                <p>FormModal</p>
+              </>
+            ))}
         </div>
       </td>
     </tr>
@@ -74,7 +73,11 @@ const AssignmentListPage = () => {
             <button className="w-8 h-8 flex items-center justify-center rounded-full bg-lamaYellow">
               <Image src="/sort.png" alt="" width={14} height={14} />
             </button>
-            {role === "admin" || role === "teacher" && <FormModal table="assignment" type="create" />}
+            {role === "admin" ||
+              (role === "teacher" && (
+                // <FormModal table="assignment" type="create" />
+                <p>FormModal</p>
+              ))}
           </div>
         </div>
       </div>

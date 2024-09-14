@@ -1,4 +1,3 @@
-import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -58,9 +57,11 @@ const ResultListPage = () => {
           {role === "admin" ||
             (role === "teacher" && (
               <>
-                <FormModal table="result" type="update" data={item} />
-                <FormModal table="result" type="delete" id={item.id} />
-              </>
+                {/* <FormModal table="result" type="update" data={item} />
+                <FormModal table="result" type="delete" id={item.id} /> */}
+                             <p>FormModal</p>
+                             <p>FormModal</p>
+                             </>
             ))}
         </div>
       </td>
@@ -69,7 +70,7 @@ const ResultListPage = () => {
 
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">
-      {/* TOP */}
+      {}
       <div className="flex items-center justify-between">
         <h1 className="hidden md:block text-lg font-semibold">All Results</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
@@ -83,14 +84,15 @@ const ResultListPage = () => {
             </button>
             {role === "admin" ||
               (role === "teacher" && (
-                <FormModal table="result" type="create" />
-              ))}
+                // <FormModal table="result" type="create" />  
+                <p>FormModal</p>
+            ))}
           </div>
         </div>
       </div>
-      {/* LIST */}
+      {}
       <Table columns={columns} renderRow={renderRow} data={resultsData} />
-      {/* PAGINATION */}
+      {}
       <Pagination />
     </div>
   );

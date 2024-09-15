@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-[Live Demo](https://next-dashboard-ui.netlify.app/)
+[Live Demo](https://next-dashboard-ui-mocha.vercel.app/admin)
 
 ## Routes
 

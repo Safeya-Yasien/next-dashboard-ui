@@ -3,7 +3,7 @@ import { hostname } from "os";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{ hostname: "images.pexels.com" }],
+    domains: ["images.pexels.com"],
   },
 };
 

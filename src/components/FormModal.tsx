@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -26,6 +27,20 @@ type TFormModal = {
   id?: number;
 };
 
+const TeacherForm = dynamic(() => import("./forms/TeacherForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+const StudentForm = dynamic(() => import("./forms/StudentForm"), {
+  loading: () => <h1>Loading...</h1>,
+});
+
+const forms: {
+  [key: string]: (type: "create" | "update", data?: any) => JSX.Element;
+} = {
+  teacher: (type, data) => <TeacherForm type={type} data={data} />,
+  student: (type, data) => <StudentForm type={type} data={data} />,
+};
+
 const FormModal = ({ table, type, data, id }: TFormModal) => {
   const size = type === "create" ? "w-8 h-8" : "w-7 h-7";
 
@@ -48,6 +63,8 @@ const FormModal = ({ table, type, data, id }: TFormModal) => {
           Delete
         </button>
       </form>
+    ) : type === "create" || type === "update" ? (
+      forms[table](type, data)
     ) : (
       "Form not found!"
     );
@@ -69,7 +86,7 @@ const FormModal = ({ table, type, data, id }: TFormModal) => {
               className="absolute top-4 right-4 cursor-pointer"
               onClick={() => setOpen(false)}
             >
-              <Image src="/close.png" alt="" width={14} height={14} />
+              <Image src="/close.png" alt="close" width={14} height={14} />
             </div>
           </div>
         </div>
